@@ -6,6 +6,8 @@ const path = require('path');
 const app = express();
 const port = 5000;
 
+const route = require('./routes');
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.urlencoded({extended:true}));
@@ -19,25 +21,11 @@ app.engine('hbs',hbs.engine);
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, "resources","views"));
 
-// method
-app.get('/home', (req, res) => {
-  res.render('home');
-});
-
-app.get('/news', (req, res) => {
-  res.render('news');
-});
-
-app.post('/search', (req, res) => {
-  console.log(req.body.q)
-  res.send('');
-});
+// Routes init
+route(app)
 
 
-app.get('/search', (req, res) => {
-    // console.log(req.query.q)
-  res.render('search');
-});
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
