@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon --inspect src/index.js",
+    "watch": "sass --watch src/resources/scss/ -o src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,7 +26,8 @@
   "homepage": "https://github.com/khangnguyen8196/Nodejs_Blog#readme",
   "devDependencies": {
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.13-alpha.1"
+    "nodemon": "^2.0.13-alpha.1",
+    "sass": "^1.55.0"
   },
   "dependencies": {
     "express": "^4.18.1",
