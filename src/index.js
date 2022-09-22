@@ -1,10 +1,10 @@
 const express = require('express');
 const morgan = require('morgan');
-const exphbs = require('express-handlebars')
-const hbs = exphbs.create( { extname: '.hbs'} )
+const handlebars = require('express-handlebars')
+const hbs = handlebars.create( { extname: '.hbs'} )
 const path = require('path');
 const app = express();
-const port = 3000;
+const port = 5000;
 
 app.use(express.static(path.join(__dirname, 'public')));
 // HTTP logger
@@ -28,6 +28,7 @@ app.get('/news', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
    
 
 
