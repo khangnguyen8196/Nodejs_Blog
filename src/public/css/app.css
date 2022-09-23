@@ -6,4 +6,19 @@ h2 {
   color: green;
 }
 
+.card-course-item {
+  margin-top: 16px;
+  width: 330px;
+  height: 468px;
+}
+
+.card-img-top {
+  display: flex;
+  margin: auto;
+  height: 288px;
+  width: 288px;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+
 /*# sourceMappingURL=app.css.map */
